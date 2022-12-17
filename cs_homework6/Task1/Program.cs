@@ -9,7 +9,3 @@ for(int i = 0; i < n;i++)
 }
 
 Console.Write("Больше нуля -> {0} числа", count);
-
-
-
-
