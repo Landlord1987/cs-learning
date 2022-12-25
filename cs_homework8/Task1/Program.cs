@@ -16,10 +16,11 @@ PrintTwoDimenArray(matrix);
 //Метод сортирвоки двумерного массива в обратном порядке
 void QuickReverseSortTwoDimen(int[,] matrix)
 {
+    int[] arr = new int[matrix.GetLength(1)];
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
         
-        int[] arr = Enumerable.Range(0, matrix.GetLength(1))
+        arr = Enumerable.Range(0, matrix.GetLength(1))
                     .Select(x => matrix[i, x])
                     .ToArray();
         
@@ -50,9 +51,10 @@ int[,] FillRandomArray(int[] sizeMatrix)
 //Метод печати двумерно массива
 void PrintTwoDimenArray(int[,] matrix)
 {
+    int[] arr = new int[matrix.GetLength(1)];
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
-        int[] arr = Enumerable.Range(0, matrix.GetLength(1))
+        arr = Enumerable.Range(0, matrix.GetLength(1))
                     .Select(x => matrix[i, x])
                     .ToArray();
         Console.WriteLine(string.Join(", ", arr));
